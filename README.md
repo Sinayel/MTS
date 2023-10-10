@@ -2,8 +2,7 @@
 
 ## Description 📄
 
-Ce projet en langage C est conçu pour simplifier le processus de la gestion des textures d'un ressource pack à l'autres.
-
+Ce projet en langage C est conçu pour simplifier le processus de la gestion des textures d'un ressource pack à l'autres.  
 Il permet de combiner des ressource packs ensemble.
 
 ## Fonctionnalités 🚀
