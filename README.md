@@ -61,6 +61,6 @@ Ce tableau présente les fonctionnalités et les améliorations prévues pour l'
 
 ## Contributions
 
-Les contributions sont les bienvenues ! Si vous souhaitez contribuer à ce projet, veuillez soumettre une demande d'extraction (Pull Request) avec vos modifications.
+Les contributions sont les bienvenues ! Si vous souhaitez contribuer à ce projet, veuillez juste faire une demande d'extraction (Pull Request) avec vos modifications.
 
 Merci de contribuer à rendre ce projet encore meilleur !
