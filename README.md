@@ -47,11 +47,13 @@ Lorsque le programme est exécuté, il crée et accepte automatiquement les doss
 ## Exemple :
 
 # Compilation
+
 ```bash
 $ gcc -o splitter file_clone.c
 ```
 
 # Clone les textures demandées, et crée un ressource pack avec
+
 ```bash
 $ ./splitter chemin/source chemin/destination
 ```
