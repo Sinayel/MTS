@@ -1,15 +1,15 @@
 # Clonage de Ressources Minecraft (MTS)
 
-## Description
+## Description 📄
 
 Ce projet est un utilitaire en langage C conçu pour simplifier le processus de clonage de ressources dans un ressource pack Minecraft. Il est utile pour les développeurs qui travaillent sur des packs de ressources pour le jeu.
 
-## Fonctionnalités
+## Fonctionnalités 🚀
 
 - Cloner des fichiers depuis un ressource pack source vers un ressource pack de destination.
 - Séparer les ressources en plusieurs catégories telles que "blocks", "items", "particle", et "font".
 
-## Noms de Dossiers Créés et Acceptés (pour l'instant)
+## Noms de Dossiers Créés et Acceptés (pour l'instant) 📂
 
 Lorsque le programme est exécuté, il crée et accepte automatiquement les dossiers suivants pour organiser les ressources de votre ressource pack Minecraft :
 
@@ -21,7 +21,7 @@ Lorsque le programme est exécuté, il crée et accepte automatiquement les doss
   
 *(Pour l'instant, ce sont les seuls dossiers que le script peut séparer du ressource pack souhaité)*
 
-## Comment ça marche
+## Comment ça marche ? 🎯
 
 1. **Configuration des chemins :** Définissez les chemins source et de destination dans le code pour votre projet spécifique.
 
@@ -31,7 +31,7 @@ Lorsque le programme est exécuté, il crée et accepte automatiquement les doss
 
 ## Utilisation
 
-### Prérequis
+### Prérequis ! 🛠️
 
 - Un environnement de développement C configuré sur votre système.
 
@@ -49,7 +49,7 @@ Exemple :
 $ ./cloner-ressources chemin/source chemin/destination
 ```
 
-## À Rajouter
+## À Rajouter 📝
 
 Ce tableau présente les fonctionnalités et les améliorations prévues pour l'avenir de ce projet :
 
