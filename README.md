@@ -29,9 +29,9 @@ Lorsque le programme est exécuté, il crée et accepte automatiquement les doss
 
 3. **Clonage des ressources :** Le programme copie les fichiers depuis les dossiers source vers les dossiers de destination appropriés, en conservant la structure de catégories.
 
-## Utilisation
+## Utilisation 🛠️
 
-### Prérequis ! 🛠️
+### Prérequis !
 
 - Un environnement de développement C configuré sur votre système.
 
