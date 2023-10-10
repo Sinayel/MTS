@@ -9,7 +9,7 @@ Ce projet est un utilitaire en langage C conçu pour simplifier le processus de 
 - Cloner des fichiers depuis un ressource pack source vers un ressource pack de destination.
 - Séparer les ressources en plusieurs catégories telles que "blocks", "items", "particle", et "font".
 
-## Noms de Dossiers Créés et Acceptés (pour l'instant) 📂
+## Noms de Dossiers Créés et Acceptés (pour l'instant) 📂⚠️
 
 Lorsque le programme est exécuté, il crée et accepte automatiquement les dossiers suivants pour organiser les ressources de votre ressource pack Minecraft :
 
