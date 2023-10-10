@@ -37,7 +37,7 @@ Lorsque le programme est exécuté, il crée et accepte automatiquement les doss
 
 ### Clonage et exécution
 
-1. Clonez ce référentiel sur votre machine locale.
+1. Clonez ce référentiel sur votre PC.
 
 2. Compilez le code source à l'aide d'un compilateur C de votre choix.
 
