@@ -45,9 +45,12 @@ Lorsque le programme est exécuté, il crée et accepte automatiquement les doss
 3. Exécutez le programme en spécifiant les chemins source et de destination appropriés.
 
 Exemple :
+```bash
+$ gcc -o splitter file_clone.c
+```
 
 ```bash
-$ ./cloner-ressources chemin/source chemin/destination
+$ ./splitter chemin/source chemin/destination
 ```
 
 ## À Rajouter 📝
