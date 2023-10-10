@@ -52,7 +52,7 @@ Lorsque le programme est exécuté, il crée et accepte automatiquement les doss
 $ gcc -o splitter file_clone.c
 ```
 
-### Clone les textures demandées, et crée un ressource pack avec
+### Clone les textures demandées, et crée un ressource pack avec (Lancer)
 
 ```bash
 $ ./splitter chemin/source chemin/destination
