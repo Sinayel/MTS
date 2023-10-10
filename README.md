@@ -13,13 +13,12 @@ Ce projet est un utilitaire en langage C conçu pour simplifier le processus de 
 
 Lorsque le programme est exécuté, il crée et accepte automatiquement les dossiers suivants pour organiser les ressources de votre ressource pack Minecraft :
 
-| Dossier    |
+| Textures    |
 |------------|
 | "blocks"   |
 | "items"    |
 | "particle" |
 | "font"     |
-| "armor"    |
   
 *(Pour l'instant, ce sont les seuls dossiers que le script peut séparer du ressource pack souhaité⚠️)*
 
