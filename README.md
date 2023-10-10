@@ -11,7 +11,7 @@ Ce projet est un utilitaire en langage C conçu pour simplifier le processus de 
 
 ## Noms de Dossiers Créés et Acceptés (pour l'instant) 📂
 
-Lorsque le programme est exécuté, il crée et accepte automatiquement les dossiers suivants pour organiser les ressources de votre ressource pack Minecraft :
+Lorsque le programme est exécuté, il crée et accepte seulement les dossiers suivants pour organiser les textures de votre ressource pack Minecraft :
 
 | Textures    |
 |------------|
