@@ -2,7 +2,8 @@
 
 ## Description 📄
 
-Ce projet est un utilitaire en langage C conçu pour simplifier le processus de clonage de ressources dans un ressource pack Minecraft. Il est utile pour les développeurs qui travaillent sur des packs de ressources pour le jeu.
+Ce projet en langage C est conçu pour simplifier le processus de la gestion des textures d'un ressource pack à l'autres. 
+Il permet de combiner des ressource packs ensemble.
 
 ## Fonctionnalités 🚀
 
