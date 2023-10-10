@@ -59,3 +59,8 @@ Ce tableau présente les fonctionnalités et les améliorations prévues pour l'
 | Nouvelles Catégories     | Étendre les catégories de ressources pour permettre l'ajout de nouvelles catégories personnalisées.     |
 | Prise en Charge des Autres Objets | Prendre en charge d'autres objets du jeu Minecraft, tels que les modèles d'entités, les sons, les fichiers de langues, etc. |
 
+## Contributions
+
+Les contributions sont les bienvenues ! Si vous souhaitez contribuer à ce projet, veuillez soumettre une demande d'extraction (Pull Request) avec vos modifications.
+
+Merci de contribuer à rendre ce projet encore meilleur !
