@@ -18,6 +18,7 @@ Lorsque le programme est exécuté, il crée et accepte automatiquement les doss
 - "particle"
 - "font"
 - "armor"
+  
 *(Pour l'instant, ce sont les seuls dossiers que le script peut séparer du ressource pack souhaité)*
 
 ## Comment ça marche
