@@ -2,6 +2,8 @@
 
 ## Description
 
+<span style="color: #ff5733">## Titre en couleur</span>
+
 Ce projet est un utilitaire en langage C conçu pour simplifier le processus de clonage de ressources dans un ressource pack Minecraft. Il est utile pour les développeurs qui travaillent sur des packs de ressources pour le jeu.
 
 ## Fonctionnalités
