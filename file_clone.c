@@ -79,7 +79,7 @@ int main() {
     const char *destination_armor = "Ressourcepackcustom/classic/assets/minecraft/textures";
 
     // Dossier de destination spécifique pour le fichier pack.mcmeta
-    const char *destinationMcmeta = "Ressourcepackcustom/classic/assets/minecraft/";
+    const char *destinationMcmeta = "Ressourcepackcustom/classic";
 
     // Nom du fichier .mcmeta à copier
     const char *nomFichierMcmeta = "pack.mcmeta";
