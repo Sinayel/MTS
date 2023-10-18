@@ -4,19 +4,14 @@
 #include <dirent.h>
 #include <sys/stat.h>
 
-const char *nomsDossiers_texture[] = {"block", "item", "particle", "font"};
-const char *nomsDossiers_armor[] = {"color_palettes", "items", "armor"};
+const char *nomsDossiers_texture[] = {"block", "item", "particle", "font", "armor"};
 
 const char *cheminsSources[] = {
     "Ressource_pack_classic/VanillaDefault+1.20/assets/minecraft/textures/block",
     "Ressource_pack_classic/VanillaDefault+1.20/assets/minecraft/textures/item",
     "Ressource_pack_classic/VanillaDefault+1.20/assets/minecraft/textures/particle",
-    "Ressource_pack_classic/VanillaDefault+1.20/assets/minecraft/font"
-};
-const char *cheminsSources_armor[] = {
-    "Ressource_pack/VanillaDefault+1.20/assets/minecraft/textures/trims",
-    "Ressource_pack/VanillaDefault+1.20/assets/minecraft/textures/trims/models",
-    "Ressource_pack/VanillaDefault+1.20/assets/minecraft/textures"
+    "Ressource_pack_classic/VanillaDefault+1.20/assets/minecraft/font",
+    "Ressource_pack_classic/VanillaDefault+1.20/assets/minecraft/textures/models/armor"
 };
 
 void copierDossier(const char *source, const char *destination) {
@@ -26,6 +21,7 @@ void copierDossier(const char *source, const char *destination) {
     // Ouvrir le dossier source
     if ((dir = opendir(source)) == NULL) {
         perror("Erreur lors de l'ouverture du dossier source");
+        printf("Erreur lors de l'ouverture du dossier %s", source);
         exit(EXIT_FAILURE);
     }
 
@@ -75,35 +71,55 @@ int main() {
     // Dossier de destination ou sont clonés les dossiers items/block etc..
     const char *destination = "Ressourcepackcustom/classic/assets/minecraft/textures";
 
-    // Dossier de destination ou sont clonés les dossiers armurs etc..
-    const char *destination_armor = "Ressourcepackcustom/classic/assets/minecraft/textures";
-
     // Dossier de destination spécifique pour le fichier pack.mcmeta
     const char *destinationMcmeta = "Ressourcepackcustom/classic";
+    const char *destinationIcon = "Ressourcepackcustom/classic";
 
-    // Nom du fichier .mcmeta à copier
-    const char *nomFichierMcmeta = "pack.mcmeta";
+    // Nom du fichier .mcmeta et icon à copier
+    const char *FichierMcmeta = "pack.mcmeta";
+    const char *icon = "pack.png";
 
     // Chemin complet vers le fichier .mcmeta source
     const char *cheminSourceMcmeta = "Ressource_pack_classic/VanillaDefault+1.20" "/" "pack.mcmeta";
+    const char *cheminSourceIcon = "Ressource_pack_classic/VanillaDefault+1.20" "/" "pack.png";
 
-    // Copier le fichier .mcmeta dans le dossier de destination spécifique
+    // Copier le fichier .mcmeta et Icon dans le dossier de destination spécifique
     char cheminDestinationMcmeta[512];
-    snprintf(cheminDestinationMcmeta, sizeof(cheminDestinationMcmeta), "%s/%s", destinationMcmeta, nomFichierMcmeta);
+    char cheminDestinationIcon[512];
+
+    snprintf(cheminDestinationMcmeta, sizeof(cheminDestinationMcmeta), "%s/%s", destinationMcmeta, FichierMcmeta);
+    snprintf(cheminDestinationIcon, sizeof(cheminDestinationIcon), "%s/%s", destinationIcon, icon);
+
     FILE *fileSourceMcmeta = fopen(cheminSourceMcmeta, "rb");
     FILE *fileDestinationMcmeta = fopen(cheminDestinationMcmeta, "wb");
+    FILE* fileSourceIcon = fopen(cheminSourceIcon, "rb");
+    FILE* fileDestinationIcon = fopen(cheminDestinationIcon, "wb");
+
     if (fileSourceMcmeta && fileDestinationMcmeta) {
         char buffer[1024];
         size_t bytesRead;
-        while ((bytesRead = fread(buffer, 1, sizeof(buffer), fileSourceMcmeta)) > 0) {
+        while ((bytesRead = fread(buffer, 1, sizeof(buffer), fileSourceMcmeta)) > 0)
+        {
             fwrite(buffer, 1, bytesRead, fileDestinationMcmeta);
+            fclose(fileSourceMcmeta);
+            fclose(fileDestinationMcmeta);
         }
-        fclose(fileSourceMcmeta);
-        fclose(fileDestinationMcmeta);
-        printf("Fichier %s copié avec succès dans le dossier de destination !\n", nomFichierMcmeta);
-    } else {
+        printf("Fichier %s copié avec succès dans le dossier de destination !\n", FichierMcmeta);
+    }else
         perror("Erreur lors de la copie du fichier .mcmeta");
-    }
+
+    if (fileSourceIcon && fileDestinationIcon){
+        char buffer[1024];
+        size_t bytesRead;
+        while((bytesRead = fread(buffer, 1, sizeof(buffer), fileSourceIcon)) > 0)
+        {
+            fwrite(buffer, 1, bytesRead, fileDestinationIcon);
+            fclose(fileSourceIcon);
+            fclose(fileDestinationIcon);
+        }
+        printf("Fichier %s copié avec succès dans le dossier de destination !\n", icon);
+    }else
+        perror("Erreur lors de la copie du fichier pack.png");
 
     // Parcourir la liste de block/items
     for (int i = 0; i < sizeof(nomsDossiers_texture) / sizeof(nomsDossiers_texture[0]); i++) {
@@ -116,21 +132,6 @@ int main() {
 
         // Copier le dossier correspondant
         copierDossier(cheminsSources[i], cheminDestination);
-
-        printf("Dossiers copiés avec succès dans le dossier %s !\n", nomDossierDestination);
-    }
-
-    // Parcourir la liste des armurs
-    for (int i = 0; i < sizeof(nomsDossiers_armor) / sizeof(nomsDossiers_armor[0]); i++) {
-        const char *nomDossierDestination = nomsDossiers_armor[i];
-        char cheminDestination[512];
-        snprintf(cheminDestination, sizeof(cheminDestination), "%s/%s", destination_armor, nomDossierDestination);
-
-        // Créer le dossier de destination
-        mkdir(cheminDestination, 0777);
-
-        // Copier le dossier correspondant
-        copierDossier(cheminsSources_armor[i], cheminDestination);
 
         printf("Dossiers copiés avec succès dans le dossier %s !\n", nomDossierDestination);
     }
