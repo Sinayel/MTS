@@ -67,7 +67,7 @@ Ce tableau présente les fonctionnalités et les améliorations prévues pour l'
 |--------------------------|----------------------------------------------------------------------------------------------------------|
 | Interface Graphique (GUI)✖︎| Ajouter une interface graphique.   |
 | Nouvelles Catégories ✚   | Ajouter de nouvelle catégorie.     |
-| Automatiser La Récuperation Des Catégorie | Automatiser la génération des differentes catégorie de dossier principal ✚    |
+| Automatiser La Récuperation Des Catégorie ✚ | Automatiser la génération des differentes catégorie de dossier principal ✚    |
 
 ## Contributions
 
