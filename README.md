@@ -27,7 +27,7 @@ Lorsque le programme est exécuté, il crée et accepte seulement les dossiers s
 | "blocks"   |
 | "items"    |
 | "particle" |
-| "font"     |
+| "etc..."     |
   
 *(Pour l'instant, ce sont les seuls textures que le script peut séparer du ressource pack souhaité⚠️)*
 
