@@ -19,11 +19,11 @@ Lorsque le programme est exécuté, il crée et accepte seulement les dossiers s
 | pack.mcmeta |
 | pack.png |
 | assets    |
-|------------|⤵
+|------------|  ⤵
 | minecraft    |
-|------------|⤵
+|------------|  ⤵
 | textures    |
-|------------|⤵
+|------------|  ⤵
 | "blocks"   |
 | "items"    |
 | "particle" |
