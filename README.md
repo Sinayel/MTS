@@ -16,11 +16,13 @@ Lorsque le programme est exécuté, il crée et accepte seulement les dossiers s
 
 | ressourcepack    |
 |------------|
+| pack.mcmeta |
+| pack.png |
 | assets    |
 |------------|
 | minecraft    |
 |------------|
-| Textures    |
+| textures    |
 |------------|
 | "blocks"   |
 | "items"    |
