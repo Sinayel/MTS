@@ -29,7 +29,7 @@ Lorsque le programme est exécuté, il crée et accepte seulement les dossiers s
 | "armor" |
 | "etc..."     |
   
-*(Pour l'instant, ce sont les seuls textures que le script peut séparer du ressource pack souhaité⚠️)*
+*(Certaines catégories de textures ne sont pas encore définis⚠️)*
 
 ## Comment ça marche ? 🎯
 
