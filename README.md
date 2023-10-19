@@ -14,15 +14,15 @@ Il permet de combiner des ressource packs ensemble.
 
 Lorsque le programme est exécuté, il crée et accepte seulement les dossiers suivants pour organiser les textures de votre ressource pack Minecraft :
 
-| ressourcepack⤵    |
+| ressourcepack ⤵    |
 |------------|
 | pack.mcmeta |
 | pack.png |
-| assets⤵    |
+| assets ⤵    |
 |------------|
-| minecraft⤵    |
+| minecraft ⤵    |
 |------------|
-| textures⤵    |
+| textures ⤵    |
 |------------|
 | "blocks"   |
 | "items"    |
