@@ -5,6 +5,7 @@
 #include <sys/stat.h>
 
 const char *nomsDossiers_texture[] = {"block", "item", "particle", "font", "armor"};
+const char *nomsDossiers[] = {"classic"};
 
 const char *cheminsSources[] = {
     "Ressource_pack_classic/VanillaDefault+1.20/assets/minecraft/textures/block",
@@ -67,7 +68,38 @@ void copierDossier(const char *source, const char *destination) {
     closedir(dir);
 }
 
+void creerDossiersImbriques(const char *cheminParent, const char *nomsDossiers[], int profondeur, int maxProfondeur) {
+    if (profondeur == maxProfondeur) {
+        return; // Condition de sortie de la récursivité
+    }
+
+    const char *nomDossier = nomsDossiers[profondeur];
+
+    // Concaténez le chemin du nouveau dossier
+    char cheminNouveauDossier[512];
+    snprintf(cheminNouveauDossier, sizeof(cheminNouveauDossier), "%s/%s", cheminParent, nomDossier);
+
+    // Créez le nouveau dossier
+    if (mkdir(cheminNouveauDossier, 0777) == 0) {
+        printf("Nouveau dossier créé avec succès : %s\n", cheminNouveauDossier);
+    } else {
+        perror("Erreur lors de la création du nouveau dossier");
+    }
+
+    // Appelez récursivement la fonction pour créer des sous-dossiers
+    creerDossiersImbriques(cheminNouveauDossier, nomsDossiers, profondeur + 1, maxProfondeur);
+}
+
 int main() {
+    mkdir( "Ressourcepackcustom", 0777 );
+
+    const char *cheminDossierParent = "Ressourcepackcustom"; // Remplacez par le chemin du dossier parent
+    const char *nomsDossiers[] = {"classic", "assets", "minecraft", "textures"};
+    int profondeurMax = 4; // Profondeur maximale de la structure de dossiers
+
+    // Créez les dossiers imbriqués en appelant la fonction récursive
+    creerDossiersImbriques(cheminDossierParent, nomsDossiers, 0, profondeurMax);
+
     // Dossier de destination ou sont clonés les dossiers items/block etc..
     const char *destination = "Ressourcepackcustom/classic/assets/minecraft/textures";
 
@@ -120,7 +152,7 @@ int main() {
         printf("Fichier %s copié avec succès dans le dossier de destination !\n", icon);
     }else
         perror("Erreur lors de la copie du fichier pack.png");
-
+    
     // Parcourir la liste de block/items
     for (int i = 0; i < sizeof(nomsDossiers_texture) / sizeof(nomsDossiers_texture[0]); i++) {
         const char *nomDossierDestination = nomsDossiers_texture[i];
